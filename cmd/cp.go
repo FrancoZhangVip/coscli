@@ -55,6 +55,17 @@ Example:
 		fmt.Println(">>>>: ", name)
 		fmt.Println(">>>>: ", endpoint)
 
+		config.Base.SecretID = secretid
+		config.Base.SecretKey = secretkey
+		config.Base.Protocol = "https"
+
+		var bucket util.Bucket
+		bucket.Endpoint = endpoint
+		bucket.Name = name
+		bucket.Alias = name
+
+		config.Buckets = append(config.Buckets, bucket)
+
 		// args[0]: 源地址
 		// args[1]: 目标地址
 		if !util.IsCosPath(args[0]) && util.IsCosPath(args[1]) {
