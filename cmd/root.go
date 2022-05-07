@@ -3,7 +3,6 @@ package cmd
 import (
 	_ "coscli/logger"
 	"coscli/util"
-	"flag"
 	"fmt"
 	"log"
 	"os"
@@ -34,16 +33,15 @@ func Execute() {
 }
 
 func init() {
-	/*cobra.OnInitialize(initConfig)
+	cobra.OnInitialize(initConfig)
 
 	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config-path", "c", "", "config file path(default is $HOME/.cos.yaml)")
 	rootCmd.PersistentFlags().StringVarP(&param.SecretID, "secret-id", "i", "", "config secretId")
 	rootCmd.PersistentFlags().StringVarP(&param.SecretKey, "secret-key", "k", "", "config secretKey")
 	rootCmd.PersistentFlags().StringVarP(&param.SessionToken, "session-token", "t", "", "config sessionToken")
 	rootCmd.PersistentFlags().StringVarP(&param.Endpoint, "endpoint", "e", "", "config endpoint")
-	*/
 
-	config.Base.SecretID = *flag.String("i", "", "secretid")
+	/*config.Base.SecretID = *flag.String("i", "", "secretid")
 	config.Base.SecretKey = *flag.String("k", "", "secretkey")
 	config.Base.Protocol = "https"
 
@@ -52,7 +50,7 @@ func init() {
 	bucket.Alias = bucket.Name
 	bucket.Endpoint = *flag.String("e", "", "endpoint")
 
-	config.Buckets = append(config.Buckets, bucket)
+	config.Buckets = append(config.Buckets, bucket)*/
 
 }
 
