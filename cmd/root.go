@@ -23,7 +23,9 @@ var rootCmd = &cobra.Command{
 	Short: "Welcome to use coscli",
 	Long:  "Welcome to use coscli!",
 	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("####################################")
 		_ = cmd.Help()
+		fmt.Println("####################################")
 	},
 	Version: "v0.11.0-beta",
 }
